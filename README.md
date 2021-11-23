@@ -1,4 +1,4 @@
-# Entropy
+# Threat Hunting with File Entropy
 Utility that will detect encrypted/compressed files in a specified directory
 
 Entropy is the measurement of the randomness.  The concept originated in the study of thermodynamics, but Claude E. Shannon in applied the concept to digital communications his 1948 paper, “A Mathematical Theory of Communication.”  Shannon was interested in determining the theoretical maximum amount that a digital file could be compressed.
