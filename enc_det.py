@@ -15,9 +15,9 @@ def get_contents(path: str) -> list:
 
 def entropy(data: list) -> float:       
     entropy = 0
-    data_lenght = len(data)
+    data_length = len(data)
     for i in range(256):
-        n = data.count(i) / data_lenght
+        n = data.count(i) / data_length
         if n > 0:
             entropy += -n * log2(n)
     return entropy
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     parser.add_argument("-d", "--dir", type=str, default = os.path.dirname(os.path.abspath(sys.argv[0])),  
         help="• specifies the path to directory where to look for encrypted/compressed files. Default - current directory.")
     parser.add_argument("-c", "--confidence", type=int, default=80,
-        help="• specifies the threshold level of confidence (in percents from 0 to 100) to treat a certain file as encryped/compressed. Default - 80%%.")
+        help="• specifies the threshold level of confidence (in percents from 0 to 100) to treat a certain file as encrypted/compressed. Default - 80%%.")
     parser.add_argument("-s", "--sorted_descending", action='store_true',
         help="• all files in the program output should be sorted by confidence level descending (from high to low).")
     parser.add_argument("-a", "--sorted_ascending", action='store_true',
